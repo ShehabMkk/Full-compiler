@@ -1,0 +1,42 @@
+========== SYNTAX TREE OUTPUT ==========
+
+      dec
+     /   \
+   expr   ;
+  / | \
+expr  =  20
+/  \
+int  x
+
+      dec
+     /   \
+   expr   ;
+  / | \
+expr  =  20
+/  \
+int  y
+
+--------------------------------------------------------
+
+inside if /////////////////
+
+
+if true=1,false=0,result --> 0
+
+        dec
+       /   \
+    if_stat  :
+   / / | \
+ if (  0  )
+
+
+========== SYMBOL TABLE ==========
+| Name       | Type   | Value    | Line |
+|------------|--------|----------|------|
+| y          | int    | 20       | 3    |
+| x          | int    | 20       | 1    |
+==================================
+
+
+========== COMPILATION SUMMARY ==========
+Compilation successful! No errors found.
