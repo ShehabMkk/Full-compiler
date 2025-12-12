@@ -6,10 +6,10 @@
 # Do NOT use the system bison/flex - they have path issues!
 
 # Step 1: Generate parser with BISON
-.\win_flex_bison\win_bison.exe -d 1.y
+bison -d 1.y
 
 # Step 2: Generate lexer with FLEX
-.\win_flex_bison\win_flex.exe 1.l
+flex 1.l
 
 # Step 3: Compile everything together
 gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
