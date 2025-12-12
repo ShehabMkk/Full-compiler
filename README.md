@@ -101,7 +101,10 @@ Full-compiler/
 │   ├── outError.txt     # Error log
 │   ├── temp             # Token log
 │   └── Commands.txt     # Build instructions
-├── Examples/            # Example programs
+├── Examples/            # Screenshot examples
+│   ├── Example1 (1-3).png   # Arithmetic operations
+│   ├── Example2 (1-3).png   # Conditional statements
+│   └── Example3 (1-4).png   # Error detection
 └── README.md
 ```
 
@@ -200,79 +203,61 @@ gcc -o compiler 1.tab.c lex.yy.c SyntaxTree.c
 
 ## 📝 Examples
 
-### Example 1: Variable Declaration
+> 📸 **Screenshots from actual compiler execution**
 
-**Input (`in.txt`):**
-```
-int x = 20;
-```
-
-**Token Log (`temp`):**
-```
-TOKEN: TYPE_INT (line 1)
-TOKEN: IDENTIFIER = x (line 1)
-TOKEN: ASSIGN (line 1)
-TOKEN: INTEGER = 20 (line 1)
-TOKEN: SEMICOLON (line 1)
-```
-
-**Syntax Tree (`tree.txt`):**
-```
-      dec
-     /   \
-   expr   ;
-  / | \
-expr  =  20
-/  \
-int  x
-```
-
-**Target Code (`out.txt`):**
-```
-STORE x, 20
-```
+| Example | Description | Features Demonstrated |
+|---------|-------------|----------------------|
+| [Example 1](#example-1-arithmetic-operations-with-print) | Arithmetic Operations | Variables, `+` operator, `print()` |
+| [Example 2](#example-2-conditional-statements-if) | Conditional Statements | `if` statement, `>` comparison |
+| [Example 3](#example-3-semantic-error-detection) | Error Detection | Undefined variable detection |
 
 ---
 
-### Example 2: Conditional Statement
+### Example 1: Arithmetic Operations with Print
 
-**Input (`in.txt`):**
-```
-int x = 20;
-if (3 > 4):
-    int y = 20;
-end
-```
+This example demonstrates variable declarations, arithmetic expressions, and the print statement.
 
-**Target Code (`out.txt`):**
-```
-STORE x, 20
-STORE y, 20
-IF_COND 0
-JUMP_FALSE end_if
-END_IF
-```
+#### Input Source Code (`in.txt`)
+![Example 1 - Input](Examples/Example1%20(1).png)
 
-**Symbol Table:**
-```
-| Name       | Type   | Value    | Line |
-|------------|--------|----------|------|
-| y          | int    | 20       | 3    |
-| x          | int    | 20       | 1    |
-```
+#### Generated Target Code (`out.txt`)
+![Example 1 - Output](Examples/Example1%20(2).png)
+
+#### Syntax Tree Visualization (`tree.txt`)
+![Example 1 - Syntax Tree](Examples/Example1%20(3).png)
 
 ---
 
-### Example 3: Arithmetic Expressions
+### Example 2: Conditional Statements (if)
 
-**Input (`in.txt`):**
-```
-int a = 10;
-int b = 5;
-int sum = a + b;
-int product = a * b;
-print(sum);
-```
+This example demonstrates if statements with comparison operators and condition evaluation.
+
+#### Input Source Code (`in.txt`)
+![Example 2 - Input](Examples/Example2%20(1).png)
+
+#### Generated Target Code (`out.txt`)
+![Example 2 - Output](Examples/Example2%20(2).png)
+
+#### Syntax Tree with Symbol Table (`tree.txt`)
+![Example 2 - Syntax Tree](Examples/Example2%20(3).png)
+
+---
+
+### Example 3: Semantic Error Detection
+
+This example demonstrates the compiler's ability to detect and report semantic errors such as undefined variables.
+
+#### Input Source Code (`in.txt`)
+![Example 3 - Input](Examples/Example3%20(1).png)
+
+#### Generated Target Code (`out.txt`) - Shows Compilation Failed
+![Example 3 - Output](Examples/Example3%20(2).png)
+
+#### Error Log (`outError.txt`)
+![Example 3 - Errors](Examples/Example3%20(3).png)
+
+#### Syntax Tree with Symbol Table (`tree.txt`)
+![Example 3 - Syntax Tree](Examples/Example3%20(4).png)
 
 ---
 
