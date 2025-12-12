@@ -1,4 +1,5 @@
-int x=20;
-if(3>4):
-int y=20;
-end
+int num1 = 100;
+int num2 = 20;
+int quotient = num1 / num2;
+print(quotient);
+print(undefined_var);

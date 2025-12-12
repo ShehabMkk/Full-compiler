@@ -1,9 +1,9 @@
 ========== TARGET CODE ==========
 
-STORE x, 20
-STORE y, 20
-IF_COND 0
-JUMP_FALSE end_if
-END_IF
+STORE num1, 100
+STORE num2, 20
+STORE quotient, 0
+PRINT quotient (0)
+PRINT undefined_var (undefined)
 
-========== COMPILATION SUCCESSFUL ==========
+========== COMPILATION FAILED ==========

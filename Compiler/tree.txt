@@ -4,9 +4,9 @@
      /   \
    expr   ;
   / | \
-expr  =  20
+expr  =  100
 /  \
-int  x
+int  num1
 
       dec
      /   \
@@ -14,29 +14,25 @@ int  x
   / | \
 expr  =  20
 /  \
-int  y
+int  num2
 
---------------------------------------------------------
-
-inside if /////////////////
-
-
-if true=1,false=0,result --> 0
-
-        dec
-       /   \
-    if_stat  :
-   / / | \
- if (  0  )
+      dec
+     /   \
+   expr   ;
+  / | \
+expr  =  0
+/  \
+int  quotient
 
 
 ========== SYMBOL TABLE ==========
 | Name       | Type   | Value    | Line |
 |------------|--------|----------|------|
-| y          | int    | 20       | 3    |
-| x          | int    | 20       | 1    |
+| quotient   | int    | 0        | 3    |
+| num2       | int    | 20       | 2    |
+| num1       | int    | 100      | 1    |
 ==================================
 
 
 ========== COMPILATION SUMMARY ==========
-Compilation successful! No errors found.
+Compilation failed with 2 error(s).

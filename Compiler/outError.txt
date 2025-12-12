@@ -1,0 +1,2 @@
+SEMANTIC ERROR: Undefined variable 'undefined_var' at line 5
+SEMANTIC ERROR: Undefined variable 'undefined_var' at line 5

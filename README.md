@@ -146,7 +146,7 @@ gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
 
 **Quick one-liner:**
 ```powershell
-.\win_flex_bison\win_bison.exe -d 1.y; .\win_flex_bison\win_flex.exe 1.l; gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
+bison -d 1.y && flex 1.l && gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
 ```
 
 ### Linux/macOS

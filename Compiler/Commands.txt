@@ -2,9 +2,6 @@
 # --------------------------
 # Run these commands in order to build the compiler
 
-# IMPORTANT: Use WinFlexBison (in win_flex_bison folder)
-# Do NOT use the system bison/flex - they have path issues!
-
 # Step 1: Generate parser with BISON
 bison -d 1.y
 
@@ -19,7 +16,7 @@ gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
 
 # --------------------------
 # Quick one-liner for building:
-# .\win_flex_bison\win_bison.exe -d 1.y; .\win_flex_bison\win_flex.exe 1.l; gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
+# bison -d 1.y && flex 1.l && gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
 
 # --------------------------
 # Output files after running:
