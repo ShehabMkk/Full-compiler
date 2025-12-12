@@ -135,18 +135,13 @@ Navigate to the `Compiler/` directory and run:
 
 ```powershell
 # Step 1: Generate parser from Bison grammar
-.\win_flex_bison\win_bison.exe -d 1.y
+bison -d 1.y
 
 # Step 2: Generate lexer from Flex specification
-.\win_flex_bison\win_flex.exe 1.l
+flex 1.l
 
 # Step 3: Compile all source files
 gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
-```
-
-**Quick one-liner:**
-```powershell
-.\win_flex_bison\win_bison.exe -d 1.y; .\win_flex_bison\win_flex.exe 1.l; gcc -o compiler.exe 1.tab.c lex.yy.c SyntaxTree.c
 ```
 
 ### Linux/macOS
