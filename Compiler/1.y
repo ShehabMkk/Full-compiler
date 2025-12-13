@@ -118,7 +118,7 @@ declaration:
         
         /* Add to symbol table */
         char* typeName = ($1 && $1->value) ? $1->value : "int";
-        int value = ($4 && $4->type == NODE_INTEGER) ? $4->intValue : 0;
+        int value = $4 ? $4->intValue : 0;
         insertSymbol(symbolTable, $2, typeName, value, yylineno);
         
         /* Print to tree file */
