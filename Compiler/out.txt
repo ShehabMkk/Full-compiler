@@ -1,9 +1,8 @@
 ========== TARGET CODE ==========
 
-STORE num1, 100
-STORE num2, 20
-STORE quotient, 0
-PRINT quotient (0)
-PRINT undefined_var (undefined)
+STORE a, 10
+STORE b, 25
+STORE mul, 250
+PRINT mul (250)
 
-========== COMPILATION FAILED ==========
+========== COMPILATION SUCCESSFUL ==========

@@ -1,5 +1,4 @@
-int num1 = 100;
-int num2 = 20;
-int quotient = num1 / num2;
-print(quotient);
-print(undefined_var);
+int a = 10
+int b = 25
+int mul = a * b
+print(mul)

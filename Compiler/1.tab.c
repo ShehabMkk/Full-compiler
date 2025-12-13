@@ -1510,7 +1510,7 @@ yyreduce:
         
         /* Add to symbol table */
         char* typeName = ((yyvsp[(1) - (4)].node) && (yyvsp[(1) - (4)].node)->value) ? (yyvsp[(1) - (4)].node)->value : "int";
-        int value = ((yyvsp[(4) - (4)].node) && (yyvsp[(4) - (4)].node)->type == NODE_INTEGER) ? (yyvsp[(4) - (4)].node)->intValue : 0;
+        int value = (yyvsp[(4) - (4)].node) ? (yyvsp[(4) - (4)].node)->intValue : 0;
         insertSymbol(symbolTable, (yyvsp[(2) - (4)].sval), typeName, value, yylineno);
         
         /* Print to tree file */
@@ -2031,3 +2031,4 @@ int main(int argc, char* argv[]) {
     
     return 0;
 }
+

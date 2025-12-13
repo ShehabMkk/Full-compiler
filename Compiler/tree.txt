@@ -4,35 +4,35 @@
      /   \
    expr   ;
   / | \
-expr  =  100
+expr  =  10
 /  \
-int  num1
+int  a
 
       dec
      /   \
    expr   ;
   / | \
-expr  =  20
+expr  =  25
 /  \
-int  num2
+int  b
 
       dec
      /   \
    expr   ;
   / | \
-expr  =  0
+expr  =  250
 /  \
-int  quotient
+int  mul
 
 
 ========== SYMBOL TABLE ==========
 | Name       | Type   | Value    | Line |
 |------------|--------|----------|------|
-| quotient   | int    | 0        | 3    |
-| num2       | int    | 20       | 2    |
-| num1       | int    | 100      | 1    |
+| mul        | int    | 250      | 4    |
+| b          | int    | 25       | 3    |
+| a          | int    | 10       | 2    |
 ==================================
 
 
 ========== COMPILATION SUMMARY ==========
-Compilation failed with 2 error(s).
+Compilation successful! No errors found.
